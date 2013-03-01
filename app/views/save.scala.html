@@ -1,0 +1,35 @@
+@(info: String, user: User, listOfAddresses: List[Address])
+
+@scripts = {
+	<script src="@routes.Assets.at("javascripts/my_save.js")" type="text/javascript"></script>
+}
+
+@main("Inicjatywa obywatelska", scripts) {
+    <div id="main">
+		<h2><img src="@routes.Assets.at("images/logo.png")" class="logo">Inicjatywa Obywatelska</h2>
+		<h4>@info</h4>
+		<p>
+			Zapisane dane: <br>
+			<b>Imię:</b> @user.firstname<br>
+			<b>Nazwisko:</b> @user.lastname<br>
+			<b>Adres:</b> @user.address<br>
+			<b>PESEL:</b> @user.pesel
+		</p>
+		<p></p>
+		<p>Poniżej na mapie zaznaczono punkty zbierania podpisów od obywateli (oznaczone <img src="@routes.Assets.at("images/redmarker.png")">). Niebieski znacznik <img src="@routes.Assets.at("images/bluemarker.png")"> pokazuje Twoje miejsce zamieszkania. Pod mapą również wylistowano adresy tych miejsc w kolejności od najbliższego punktu, do najdalszego. Pogrubiona czcionka oznacza odległość nie większą niż 2km od Twojego miejsca zamieszkania.</p>
+		<div id="map" style="height: 600px; width: 900px;"></div>
+		<div id="@user.latlng" class="curLatLng hidden"></div>
+		<p>Lista punktów zbierania podpisów (od najbliższego do najdalszego):</p>
+		@if(listOfAddresses.isEmpty) {
+			Chwilowo brak takich punktów.
+		} else {
+			<ul id="addrlist">
+				@listOfAddresses.map { item => 
+					<li id="@item.latlng" class="latLngList @if(item.distance <= 2){bold}">@item.address</li>
+				}
+			</ul>
+		}
+		<p></p>
+		<p><a href="/">Powrót do formularza</a></p>
+    </div>
+}

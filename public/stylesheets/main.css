@@ -1,0 +1,68 @@
+body 
+{
+	background-color: #1a1a1a;
+	color: #777;
+	text-shadow: rgba(0,0,0,0.01) 0 0 0;
+}
+
+a
+{
+	color: orange;
+	text-decoration: none;
+}
+
+a:visited
+{
+	color: yellow;
+}
+
+a:hover
+{
+	color: white;
+	text-decoration: underline overline;
+}
+
+h2, h3
+{
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+div#main
+{
+	width: 80%;
+	margin: 20px auto 0 auto;
+}
+
+img.logo
+{
+	vertical-align: middle;
+	padding: 0 5px 5px 0;
+}
+
+.bold
+{
+	font-weight: bold;
+}
+
+.hidden
+{
+	display: none;
+}
+
+/* -------------- List of addresses ------------ */
+ul#addrlist
+{
+	list-style-type: square; 
+}
+
+ul#addrlist li
+{
+	color: #bbb;
+}
+
+ul#addrlist li:hover
+{
+	color: #fff;
+	cursor: pointer;
+}

@@ -1,0 +1,177 @@
+
+/* --------------- Autocomplete plugin suggestions list ------------------ */
+.ui-helper-hidden 
+{
+	display: none;
+}
+
+.ui-helper-hidden-accessible 
+{
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+.ui-autocomplete 
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	cursor: default;
+}
+
+.ui-menu
+{
+	width: 240px;
+	list-style: none;
+	padding: 2px;
+	margin: 0;
+	display: block;
+	outline: none;
+	overflow: hidden;
+	z-index: 1000;
+}
+.ui-menu .ui-menu {
+	margin-top: -3px;
+	position: absolute;
+}
+
+.ui-menu .ui-menu-item {
+	margin: 0;
+	width: 100%;
+	background-color: #fff;
+	white-space: nowrap;
+}
+
+.ui-menu-item a
+{
+	padding: 0 4px;
+	color: #777;
+	text-decoration: none;
+	display: block;
+}
+
+.ui-menu .ui-menu-item a.ui-state-focus,
+.ui-menu .ui-menu-item a.ui-state-active 
+{
+	background-color: #eee;
+}
+
+.ui-dialog
+{
+	border: 1px solid #404040;
+	background: #121212 url(../images/ui-bg_gloss-wave_16_121212_500x100.png) 50% top repeat-x;
+	color: #eeeeee;
+	font-family: inherit;
+	font-size: 0.9em;
+	border-top-right-radius: 3px;
+	position: absolute;
+	height: auto;
+	top: 562px;
+	display: block;
+	padding: .2em;
+	outline: 0;
+	z-index: 100;
+}
+
+.ui-draggable .ui-dialog-titlebar 
+{
+	cursor: move;
+}
+
+.ui-dialog .ui-dialog-titlebar 
+{
+	padding: .4em 1em;
+	position: relative;
+	border-radius: 3px;
+	border: 1px solid #404040;
+	background: #888888 url(../images/ui-bg_highlight-hard_15_888888_1x100.png) 50% 50% repeat-x;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.ui-button
+{
+	border: 1px solid #cccccc;
+	background: #adadad url(../images/ui-bg_highlight-soft_35_adadad_1x100.png) 50% 50% repeat-x;
+	font-weight: normal;
+	color: #333333;
+	border-radius: 3px;
+	display: inline-block;
+	position: relative;
+	line-height: normal;
+	cursor: pointer;
+	vertical-align: middle;
+	text-align: center;
+	overflow: visible;
+}
+
+.ui-button:hover
+{
+	background: #adadad url(../images/ui-bg_highlight-soft_60_dddddd_1x100.png) 50% 50% repeat-x;
+}
+
+.ui-dialog .ui-dialog-titlebar-close 
+{
+	position: absolute;
+	right: .3em;
+	top: 50%;
+	width: 21px;
+	margin: -10px 0 0 0;
+	padding: 1px;
+	height: 20px;
+}
+
+.ui-state-default .ui-icon 
+{
+	background-image: url(../images/ui-icons_666666_256x240.png);
+	left: 50%;
+	margin-left: -8px;
+	position: absolute;
+	top: 50%;
+	margin-top: -8px;
+	width: 16px;
+	height: 16px;
+	display: block;
+	text-indent: -99999px;
+	overflow: hidden;
+	background-repeat: no-repeat;
+}
+.ui-button-icon-only .ui-button-text, .ui-button-icon-only .ui-button-text
+{
+	display: none;
+	padding: .4em;
+	text-indent: -9999999px;
+}
+
+.ui-icon-closethick 
+{
+	background-position: -96px -128px;
+}
+
+.ui-icon 
+{
+	display: block;
+	text-indent: -99999px;
+	overflow: hidden;
+	background-repeat: no-repeat;
+}
+
+.ui-dialog .ui-dialog-content 
+{
+	position: relative;
+	border: 0;
+	padding: .5em 1em;
+	background: none;
+	overflow: auto;
+}
+
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset 
+{
+	float: right;
+}

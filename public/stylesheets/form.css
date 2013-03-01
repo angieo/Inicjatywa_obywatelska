@@ -1,0 +1,104 @@
+/* ----------------- Form ----------------- */
+
+ul
+{
+	list-style: none;
+}
+
+form > ul > li
+{
+	border-bottom: 1px dashed #333;
+}
+
+li label
+{
+	font-weight: bold;
+	color: #ddd;
+	float: left;
+	display: block;
+	width: 200px;
+} 
+
+dl
+{
+	position: relative;
+}
+
+dd
+{
+	display: inline;
+}
+
+input:focus 
+{
+	border: 2px solid #900;
+}
+
+li input[type="text"]
+{
+	width: 240px;
+	border: 0;
+	margin: 10px 0 0 0;
+	padding: 0.4em;	
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	font-size: inherit;
+	font-family: inherit;
+}
+
+li input[type="submit"]
+{
+	float: right;
+	clear: both;
+	margin: 5px 0;
+	width: 86px;
+	height: 22px;
+	position: relative;
+	overflow: hidden;
+	padding: 0;
+}
+
+/* ----------- Showing error messages ---------- */
+
+dd.info
+{
+	display: block;
+	width: 200px;
+	margin-left: 0;
+}
+
+dd.error, dd.info, ul.info, .starred
+{
+	font-size: 0.7em;
+	color:#666;
+}
+
+ul.info
+{
+	position: absolute;
+}
+
+li.error
+{
+	color: #EC6767;
+}
+
+li.warning
+{
+	color: #FFB225;
+}
+
+input.error-input
+{
+	background-color: #FCBABA;
+}
+
+input.valid-input
+{
+	background-color: #ACD1B5;
+}
+
+input.warning-input
+{
+	background-color: #F8DAA3;
+}

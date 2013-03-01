@@ -1,0 +1,33 @@
+@(info: String, supForm: Form[(String, String, String, String, String, Boolean)])(implicit request: play.api.mvc.Request[Any])
+
+@import helper._
+
+@scripts = {
+    <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/form.css")">
+    <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/some-jquery-ui.css")">
+	<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+	<script src="@routes.Assets.at("javascripts/jquery.validate.js")" type="text/javascript"></script>
+	<script src="@routes.Assets.at("javascripts/jquery.numeric.js")" type="text/javascript"></script>
+	<script src="@routes.Assets.at("javascripts/my_index.js")" type="text/javascript"></script>
+}
+
+@main("Inicjatywa obywatelska", scripts) {
+    <div id="main">
+		<h2><img src="@routes.Assets.at("images/logo.png")" class="logo">Inicjatywa Obywatelska</h2>
+		<h4>@info</h4>
+		<p>@form(routes.Application.save, 'id->"isupportit") {
+			<ul>
+				<li>@inputText(supForm("firstname"), '_label -> "Imię/Imiona", 'placeholder -> "Wpisz imię lub imiona")</li>
+				<li>@inputText(supForm("lastname"), '_label -> "Nazwisko", 'placeholder -> "Wpisz nazwisko")</li>
+				<li>@inputText(supForm("address"), '_label -> "Adres", 'placeholder -> "Wpisz adres") <input type="hidden" name="latlng" id="latlng"value=""></li>
+				<li>@inputText(supForm("pesel"), '_label -> "PESEL", 'maxlength -> 11, 'placeholder -> "Wpisz numer PESEL")</li>
+				<li>@checkbox(supForm("help"), '_label -> "Pomożesz?*", '_help -> "Chcesz pomóc w zbieraniu podpisów?")</li>
+				<li class="starred">* Możesz pomóc Inicjatywie Obywatelskiej wyrażając zgodę na zarejestrowanie swojego miejsca zamieszkania jako punktu zbierania podpisów.</li>
+				<li><input type="submit" value="Zapisz" id="save"></li>
+			</ul>
+		}</p>
+    </div>
+	<div id="confirmsave" class="hidden" title="Potwierdzenie zapisu danych">
+		<p>Proszę potwierdzić zapis danych pomimo wykrytych problemów.</p>
+	</div>
+}

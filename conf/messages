@@ -1,0 +1,26 @@
+# Default messages
+
+# --- Constraints
+constraint.required=Pole wymagane
+constraint.min=Minimalna wartość: {0}
+constraint.max=Maksymalna wartość: {0}
+constraint.minLength=Minimalna długość: {0}
+constraint.maxLength=Maksymalna długość: {0}
+constraint.email=Email
+
+# --- Formats
+format.date=Date (''{0}'')
+format.numeric=Numeric
+format.real=Real
+
+# --- Errors
+error.invalid=Nieprawidłowa wartość
+error.required=To pole jest wymagane
+error.number=Numeric value expected
+error.real=Real number value expected
+error.min=Must be greater or equal to {0}
+error.max=Must be less or equal to {0}
+error.minLength=Minimalna długość to {0}
+error.maxLength=Maksymalna długość to {0}
+error.email=Valid email required
+error.pattern=Musi spełniać {0}
