@@ -9,4 +9,3 @@ Do implementacji wykorzystano:
 - jQuery 1.9.1
 - jQuery UI 1.10.1 (Autocomplete, Dialog)
 - Google Maps Api v3
->>>>>>> Commiting all files
