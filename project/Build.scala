@@ -11,7 +11,8 @@ object ApplicationBuild extends Build {
     // Add your project dependencies here,
     jdbc,
     anorm,
-	"org.scalatest" % "scalatest_2.10" % "1.9.1" % "test"
+	"org.scalatest" % "scalatest_2.10" % "1.9.1" % "test",
+    "postgresql" % "postgresql" % "9.1-901-1.jdbc4"
   )
 
 
