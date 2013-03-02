@@ -4,15 +4,14 @@ import play.Project._
 
 object ApplicationBuild extends Build {
 
-  val appName         = "citizensWithMap"
+  val appName         = "testowe"
   val appVersion      = "1.0-SNAPSHOT"
 
   val appDependencies = Seq(
     // Add your project dependencies here,
     jdbc,
     anorm,
-	"org.scalatest" % "scalatest_2.10" % "1.9.1" % "test",
-    "postgresql" % "postgresql" % "9.1-901-1.jdbc4"
+	"postgresql" % "postgresql" % "9.1-901-1.jdbc4"
   )
 
 

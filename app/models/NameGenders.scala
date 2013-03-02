@@ -21,7 +21,7 @@ object NameGenders {
 	}
 	
 	def getGender(name: String): String = DB.withConnection { implicit connection =>
-		val result =  SQL("select count(*) as c, gender from name_gender where name={name}").onParams(name).apply()
+		val result =  SQL("select count(*) as c, gender from name_gender where name={name} group by gender").onParams(name).apply()
 		var out = "Error"
 		if(result.head[Long]("c") > 0)
 			out = result.head[String]("gender")
